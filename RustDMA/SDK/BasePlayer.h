@@ -60,7 +60,7 @@ class BasePlayer
   "Name": "BasePlayer_TypeInfo",
   "Signature": "BasePlayer_c*"
 */
-	uint64_t StaticClass = 0x3C729E8;
+	uint64_t StaticClass = 0xFCCA7D0;
 	uint64_t Class = 0;
 	uint64_t PlayerFlag = 0x6B8; // 	public global::BasePlayer.PlayerFlags playerFlags;
 	uint64_t BaseMovementOffset = 0x4E0; // public BaseMovement movement;
@@ -72,14 +72,14 @@ class BasePlayer
 	uint64_t DisplayName = 0x2D8; // protected string _displayName;
 	uint64_t VisiblePlayerList = 0x20; // 	private static ListDictionary<ulong, global::BasePlayer> visiblePlayerList;
 	uint64_t DestroyedOffset = 0x40; // basenetworkable -> private bool <IsDestroyed>k__BackingField;
-	uint32_t IsNPCOffset = 0x2E2; // 	private bool <IsNpc>k__BackingField;
+	uint32_t IsNPCOffset = 0x490; // 	private bool <IsNpc>k__BackingField;
 	std::shared_ptr<BaseMovement> BaseMovementInstance;
 
 
 	uint32_t ActiveItemID = 0;
 
 	// these are offsets outside of baseplayer. I just don't want the hassle of 1000 classes. The Class is before the "->"
-	uint64_t ContainerBelt = 0x30; // PlayerInventory -> public global::ItemContainer containerBelt;
+	uint64_t ContainerBelt = 0x58; // PlayerInventory -> public global::ItemContainer containerBelt;
 	uint64_t ItemList = 0x58; // ItemContainer -> 	public List<global::Item> itemList;
 	uint64_t ItemListContents = 0x10; // ItemList + 0x10 is the actual contents of the c# list
 	uint64_t ItemListSize = 0x18; // ItemList + 0x18 is the size of a c# list
